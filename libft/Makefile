@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nkojima <nkojima@student.42.fr>            +#+  +:+       +#+         #
+#    By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/05/14 19:31:17 by nkojima          ###   ########.fr        #
+#    Updated: 2025/05/21 06:05:33 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,13 @@ SRC_FILES = isalpha \
 			strlcpy \
 			strlcat \
 			toupper \
-			tolower
+			tolower \
+			strchr \
+			strrchr \
+			strncmp \
+			memchr \
+			memcmp \
+			strnstr
 SRCS 	   = $(addprefix ft_, $(addsuffix .c, $(SRC_FILES)))
 OBJS       = $(SRCS:.c=.o)
 
