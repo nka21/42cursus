@@ -6,10 +6,23 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:20:15 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 17:20:41 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 19:25:16 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd);
+/**
+ * Outputs the string `s` to the specified file descriptor with newline.
+ *
+ * Params:
+ * @s: The string to output.
+ * @fd: The file descriptor on which to write.
+ */
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}
