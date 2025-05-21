@@ -6,27 +6,34 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:36 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/15 19:09:51 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:36:15 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-// 文字が英数字であることを判定します。
-// 「英数字である」とは、「英字である」または「数字である」ことです。
-// 真：英数字　　　→0以外を返す
-// 偽：英数字以外　→0を返す
-
+/**
+ * Checks if a character is alphanumeric (a letter or a digit).
+ *
+ * Params:
+ * @c: The character to check.
+ *
+ * Return:
+ * - 1 if the character is alphanumeric.
+ * - 0 otherwise.
+ */
 int	ft_isalnum(int c)
 {
-	unsigned char	uc;
-
-	uc = (unsigned char)c;
-	return (ft_isalpha(uc) || ft_isdigit(uc));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 
 // int	main(void)
 // {
+// 	int	c;
+
+// 	c = EOF;
+// 	printf("ft_isalnum(EOF): %d\n", ft_isalnum(c));
+// 	printf("isalnum(EOF): %d\n", isalnum(c));
 // 	printf("ft_isalnum('2'): %d\n", ft_isalnum('2'));
 // 	printf("isalnum('2'): %d\n", isalnum('2'));
 // 	printf("ft_isalnum('a'): %d\n", ft_isalnum('a'));

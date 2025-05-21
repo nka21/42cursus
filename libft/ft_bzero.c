@@ -6,21 +6,26 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 19:04:48 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/18 18:45:07 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:15:21 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Sets the first `n` bytes of the memory area `s` to zero.
+ *
+ * Params:
+ * @s: Pointer to the memory area.
+ * @n: Number of bytes to set to zero.
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
 	while (n--)
-	{
 		*ptr++ = 0;
-	}
 }
 
 // int	main(void)

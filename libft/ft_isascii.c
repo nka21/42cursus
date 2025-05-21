@@ -6,23 +6,25 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:28 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/15 19:10:17 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:22:20 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-// 文字がASCII文字であることを判定します。
-// 「ASCII文字である」とは、文字のASCIIコードが0から127であることです。
-// 真：ASCII文字　　　→0以外を返す
-// 偽：ASCII文字以外　→0を返す
-
+/**
+ * Checks if a character is an ASCII character (0 to 127).
+ *
+ * Params:
+ * @c: The character to check.
+ *
+ * Return:
+ * - 1 if the character is ASCII.
+ * - 0 otherwise.
+ */
 int	ft_isascii(int c)
 {
-	unsigned char	uc;
-
-	uc = (unsigned char)c;
-	return (0 <= uc && uc <= 127);
+	return (0 <= c && c <= 127);
 }
 
 // int	main(void)

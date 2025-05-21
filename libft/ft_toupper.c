@@ -6,17 +6,20 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:10:05 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/18 18:45:20 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:07:15 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
 static int	ft_islower(int c)
 {
 	return ('a' <= c && c <= 'z');
 }
 
+/**
+ * Converts a lowercase letter to uppercase.
+ */
 int	ft_toupper(int c)
 {
 	if (ft_islower(c))

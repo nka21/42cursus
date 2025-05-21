@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 02:45:57 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 12:30:46 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:03:31 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_atoi(const char *str)
 		result = result * 10 + (*str - '0');
 		str++;
 	}
-	return (int)(sign * result);
+	return ((int)(sign * result));
 }
 
 // int	main(void)

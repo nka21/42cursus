@@ -6,12 +6,23 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:02:33 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/15 19:10:30 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:15:48 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Fills the first `n` bytes of the memory area `buf` with the byte `ch`.
+ *
+ * Params:
+ * @buf: Pointer to the memory area.
+ * @ch: Byte value to fill.
+ * @n: Number of bytes to fill.
+ *
+ * Return:
+ * A pointer to the memory area `buf`.
+ */
 void	*ft_memset(void *buf, int ch, size_t n)
 {
 	unsigned char	*ptr;

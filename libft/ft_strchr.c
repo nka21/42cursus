@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:33:14 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 00:57:06 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:10:59 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /**
  * Finds the first occurrence of a character in a string.
  *
+ * Params:
  * @s: The string to search.
  * @c: The character to find.
  *

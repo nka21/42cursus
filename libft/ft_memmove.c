@@ -6,20 +6,22 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:25:26 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/20 23:36:29 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:13:51 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * ft_memmove - Copies memory area, handling overlapping regions safely.
+ * Copies memory area, handling overlapping regions safely.
  *
+ * Params:
  * @dst: The destination buffer where the memory will be copied to.
  * @src: The source buffer from which the memory will be copied.
  * @cpy_size: The number of bytes to copy.
  *
- * Return: A pointer to the destination buffer `dst`.
+ * Return:
+ * A pointer to the destination buffer `dst`.
  * */
 void	*ft_memmove(void *dst, const void *src, size_t cpy_size)
 {

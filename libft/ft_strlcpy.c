@@ -6,21 +6,23 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:31:38 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/19 17:36:37 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 18:13:24 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * ft_strlcpy - Copies up to dstsize - 1 characters from the string src to dst,
- *              null-terminating the result if dstsize is not 0.
+ * Copies up to dstsize - 1 characters from the string `src` to `dst`,
+ * null-terminating the result if dstsize is not 0.
  *
+ * Params:
  * @dst: The destination buffer where the string will be copied.
  * @src: The source string to copy from.
  * @dstsize: The size of the destination buffer.
  *
- * Return: The total length of the string it tried to create (length of src).
+ * Return:
+ * The total length of the string it tried to create (length of src).
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
