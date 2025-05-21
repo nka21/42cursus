@@ -6,7 +6,7 @@
 #    By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/05/21 12:31:37 by nkojima          ###   ########.fr        #
+#    Updated: 2025/05/21 15:01:48 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,9 @@ SRC_FILES = isalpha \
 			memchr \
 			memcmp \
 			strnstr \
-			atoi
+			atoi \
+			calloc \
+			strdup
 SRCS 	   = $(addprefix ft_, $(addsuffix .c, $(SRC_FILES)))
 OBJS       = $(SRCS:.c=.o)
 

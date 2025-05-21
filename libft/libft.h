@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:39 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 06:03:35 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/21 15:08:52 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 
 # include <bsd/string.h>
 # include <ctype.h>
+# include <limits.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -39,5 +42,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *find, size_t len);
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *str);
 
 #endif
