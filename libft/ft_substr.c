@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:10:54 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/23 20:15:53 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/25 19:06:20 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,28 +23,28 @@
  * Return:
  * A newly allocated substring, or NULL on failure.
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
-	char	*str;
+	char	*substr;
 	size_t	copied;
 	size_t	s_len;
 	size_t	idx;
 
-	s_len = ft_strlen(s);
+	s_len = ft_strlen(str);
 	idx = (size_t)start;
 	if (idx >= s_len)
 		return (ft_calloc(1, 1));
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
+	substr = (char *)malloc(sizeof(*substr) * (len + 1));
+	if (!substr)
 		return (NULL);
 	copied = 0;
-	while (copied < len && s[idx + copied])
+	while (copied < len && str[idx + copied])
 	{
-		str[copied] = s[idx + copied];
+		substr[copied] = str[idx + copied];
 		copied++;
 	}
-	str[copied] = '\0';
-	return (str);
+	substr[copied] = '\0';
+	return (substr);
 }
 
 // int	main(void)

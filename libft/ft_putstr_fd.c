@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:19:54 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 19:19:15 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/25 19:08:40 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@
  * @s: The string to output.
  * @fd: The file descriptor to write to.
  */
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *str, int fd)
 {
-	if (!s)
+	if (!str)
 		return ;
-	while (*s)
+	while (*str)
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		ft_putchar_fd(*str, fd);
+		str++;
 	}
 }
