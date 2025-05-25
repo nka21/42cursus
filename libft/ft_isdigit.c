@@ -6,11 +6,11 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:34 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:36:02 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/25 18:00:53 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
 /**
  * Checks if a character is a digit (0-9).

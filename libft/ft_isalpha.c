@@ -6,11 +6,11 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:31 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:35:58 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/25 18:00:29 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
 static int	ft_islower(unsigned char c)
 {
