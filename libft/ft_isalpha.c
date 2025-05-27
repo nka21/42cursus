@@ -6,18 +6,18 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:31 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 18:00:29 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/28 03:30:41 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_islower(unsigned char c)
+static int	ft_islower(char c)
 {
 	return ('a' <= c && c <= 'z');
 }
 
-static int	ft_isupper(unsigned char c)
+static int	ft_isupper(char c)
 {
 	return ('A' <= c && c <= 'Z');
 }
