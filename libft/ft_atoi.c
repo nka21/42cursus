@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 02:45:57 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:03:31 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/28 07:46:20 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,43 @@
 static int	ft_isspace(int c)
 {
 	return (c == ' ' || (c >= '\t' && c <= '\r'));
+}
+
+static const char	*skip_whitespace_and_sign(const char *str, int *sign)
+{
+	*sign = 1;
+	while (ft_isspace((int)*str))
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			*sign = -1;
+		str++;
+	}
+	return (str);
+}
+
+static int	convert_digits(const char *str, int sign)
+{
+	long	result;
+	long	limit;
+
+	result = 0;
+	limit = LONG_MAX / 10;
+	while (ft_isdigit((int)*str))
+	{
+		if ((result > limit) || (result == limit && (*str - '0') > LONG_MAX
+				% 10))
+		{
+			if (sign == 1)
+				return (-1);
+			else
+				return (0);
+		}
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+	return ((int)(sign * result));
 }
 
 /**
@@ -31,30 +68,16 @@ static int	ft_isspace(int c)
  */
 int	ft_atoi(const char *str)
 {
-	long	result;
-	int		sign;
+	int			sign;
+	const char	*digits_start;
 
-	result = 0;
-	sign = 1;
-	while (ft_isspace((int)*str))
-		str++;
-	if (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			sign = -sign;
-		str++;
-	}
-	while (ft_isdigit((int)*str))
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	return ((int)(sign * result));
+	digits_start = skip_whitespace_and_sign(str, &sign);
+	return (convert_digits(digits_start, sign));
 }
 
 // int	main(void)
 // {
-// 	char	str[42] = "  -42aaa";
+// 	char	str[42] = "+9223372036854775807";
 
 // 	printf("ft: %d\n", ft_atoi(str));
 // 	printf("  : %d\n", atoi(str));
