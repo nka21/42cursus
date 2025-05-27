@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 01:14:26 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 02:04:46 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/28 02:14:23 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*target;
 	unsigned char		search;
-	size_t				cnt;
+	size_t				count;
 
-	cnt = 0;
+	count = 0;
 	search = (unsigned char)c;
 	target = (const unsigned char *)s;
-	while (cnt < n)
+	while (count < n)
 	{
 		if (*target == search)
 			return ((void *)target);
 		target++;
-		cnt++;
+		count++;
 	}
 	return (NULL);
 }
