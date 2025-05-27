@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:27:15 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:14:11 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/28 04:07:09 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t cpy_size)
 	unsigned char		*dst_ptr;
 	const unsigned char	*src_ptr;
 
+	if (cpy_size == 0 || dst == src)
+		return (dst);
 	dst_ptr = (unsigned char *)dst;
 	src_ptr = (const unsigned char *)src;
 	while (cpy_size--)

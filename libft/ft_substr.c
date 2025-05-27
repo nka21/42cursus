@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:10:54 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 21:01:37 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/28 03:57:23 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,26 @@
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	copied;
-	size_t	s_len;
-	size_t	idx;
+	size_t	i;
+	size_t	str_len;
+	size_t	substr_len;
 
-	s_len = ft_strlen(str);
-	idx = (size_t)start;
-	if (idx >= s_len)
+	str_len = ft_strlen(str);
+	if ((size_t)start >= str_len)
 		return (ft_calloc(1, 1));
-	substr = malloc(sizeof(*substr) * (len + 1));
+	substr_len = str_len - (size_t)start;
+	if (substr_len > len)
+		substr_len = len;
+	substr = malloc(sizeof(*substr) * (substr_len + 1));
 	if (!substr)
 		return (NULL);
-	copied = 0;
-	while (copied < len && str[idx + copied])
+	i = 0;
+	while (i < substr_len && str[start + i])
 	{
-		substr[copied] = str[idx + copied];
-		copied++;
+		substr[i] = str[start + i];
+		i++;
 	}
-	substr[copied] = '\0';
+	substr[i] = '\0';
 	return (substr);
 }
 

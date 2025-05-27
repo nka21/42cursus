@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:25:26 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:13:51 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/28 04:06:35 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memmove(void *dst, const void *src, size_t cpy_size)
 	unsigned char		*dst_ptr;
 	const unsigned char	*src_ptr;
 
+	if (cpy_size == 0 || dst == src)
+		return (dst);
 	dst_ptr = (unsigned char *)dst;
 	src_ptr = (const unsigned char *)src;
 	if (dst_ptr < src_ptr)
