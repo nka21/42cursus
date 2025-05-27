@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:10:54 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 19:06:20 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/25 21:01:37 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	idx = (size_t)start;
 	if (idx >= s_len)
 		return (ft_calloc(1, 1));
-	substr = (char *)malloc(sizeof(*substr) * (len + 1));
+	substr = malloc(sizeof(*substr) * (len + 1));
 	if (!substr)
 		return (NULL);
 	copied = 0;

@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 12:32:00 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 15:01:10 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/25 21:02:34 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 	n = 5;
 // 	p1 = calloc(n, 1);
 // 	p2 = ft_calloc(n, 1);
-// 	if (!p1 || !p2)
-// 		return (1);
 // 	/* メモリ内容を比較。ゼロ初期化なら memcmp == 0 */
 // 	printf("%s\n", memcmp(p1, p2, n) == 0 ? "same" : "different");
 // 	free(p1);

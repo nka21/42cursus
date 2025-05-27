@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:11:34 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 18:01:44 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/25 21:01:43 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	total_len = len1 + len2;
-	joined = (char *)malloc(sizeof(*joined) * (total_len + 1));
+	joined = malloc(sizeof(*joined) * (total_len + 1));
 	if (!joined)
 		return (NULL);
 	ft_memcpy(joined, s1, len1);
