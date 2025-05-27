@@ -6,7 +6,7 @@
 #    By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/05/21 17:16:30 by nkojima          ###   ########.fr        #
+#    Updated: 2025/05/28 05:02:07 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ SRC_FILES = isalpha \
 			putchar_fd \
 			putstr_fd \
 			putendl_fd \
-			putnbr_fd 
+			putnbr_fd
 SRCS 	   = $(addprefix ft_, $(addsuffix .c, $(SRC_FILES)))
 OBJS       = $(SRCS:.c=.o)
 
@@ -67,11 +67,9 @@ OBJS       = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-# ライブラリ作成：既存のオブジェクトが変わらなければ再生成しない
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $?
 
-# オブジェクト生成：ヘッダが変更されたら再コンパイル
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
