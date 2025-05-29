@@ -6,7 +6,7 @@
 #    By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/05/28 05:02:07 by nkojima          ###   ########.fr        #
+#    Updated: 2025/05/30 02:35:53 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,8 @@
 #            Settings           #
 #################################
 NAME      = libft.a
-CC        = cc
 CFLAGS    = -Wall -Wextra -Werror
-AR        = ar
 ARFLAGS   = rcs
-RM        = rm -f
 
 #################################
 #         Source & Objects      #
@@ -63,8 +60,6 @@ OBJS       = $(SRCS:.c=.o)
 #################################
 #            Rules              #
 #################################
-.PHONY: all clean fclean re
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -80,3 +75,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

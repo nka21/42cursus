@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:33:59 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 01:06:41 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 03:27:42 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_strrchr(const char *str, int c)
 	unsigned char	uc;
 	const char		*ptr;
 
+	// TODO: unsigned char を使わずに、char でやる。
 	len = ft_strlen(str);
 	uc = (unsigned char)c;
 	ptr = str + len;

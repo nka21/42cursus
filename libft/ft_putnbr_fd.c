@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:20:55 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 19:09:52 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 03:03:12 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void	ft_putnbr_fd(int nb, int fd)
 	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
-		uint_num = -(unsigned int)nb;
+		// TODO: nb の符号反転 校舎環境
+		uint_num = nb * -1;
 	}
 	else
 		uint_num = (unsigned int)nb;

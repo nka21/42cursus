@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:12:01 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 18:13:33 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 03:35:40 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
+	// TODO: s1 と set が とっても大きい数が入っている場合を考慮して、計算量の工夫をしたい
+	// 現状 (N)^2 になってるからそれを O(N) にしたい
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;

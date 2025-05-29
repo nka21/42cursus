@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:31:35 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:12:18 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 03:12:42 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 
+	// TODO: strnlen を使って、dstsize == 0 の場合を実装する
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dst_len >= dstsize)

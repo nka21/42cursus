@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 02:45:57 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 07:46:20 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 02:45:16 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ static int	convert_digits(const char *str, int sign)
 				% 10))
 		{
 			if (sign == 1)
-				return (-1);
+				return ((int)LONG_MAX);
 			else
-				return (0);
+				return ((int)LONG_MIN);
 		}
 		result = result * 10 + (*str - '0');
 		str++;
@@ -75,11 +75,11 @@ int	ft_atoi(const char *str)
 	return (convert_digits(digits_start, sign));
 }
 
-// int	main(void)
-// {
-// 	char	str[42] = "+9223372036854775807";
+int	main(void)
+{
+	char	str[42] = "9223372036854775807";
 
-// 	printf("ft: %d\n", ft_atoi(str));
-// 	printf("  : %d\n", atoi(str));
-// 	return (0);
-// }
+	printf("ft: %d\n", ft_atoi(str));
+	printf("  : %d\n", atoi(str));
+	return (0);
+}

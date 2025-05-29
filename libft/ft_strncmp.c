@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:34:32 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 02:14:40 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 03:14:25 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	count;
 
 	count = 0;
-	while (*s1 && count < n && (*s1 == *s2))
+	while (count < n && *s1 && (*s1 == *s2))
 	{
 		s1++;
 		s2++;
