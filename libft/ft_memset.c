@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:02:33 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:15:48 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:35:08 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ void	*ft_memset(void *buf, int ch, size_t n)
 		*ptr++ = (unsigned char)ch;
 	return (buf);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

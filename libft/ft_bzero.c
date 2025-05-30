@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 19:04:48 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:15:21 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:01:44 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ void	ft_bzero(void *s, size_t n)
 	while (n--)
 		*ptr++ = 0;
 }
+
+// #include <stdio.h>
+// #include <strings.h>
 
 // int	main(void)
 // {

@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:12:40 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 03:21:52 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:55:54 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,8 @@ char	**ft_split(char const *str, char delim)
 		return (NULL);
 	return (result);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 12:32:20 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 15:10:57 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:10:07 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ char	*ft_strdup(const char *str)
 	ft_memcpy(ptr, str, str_len + 1);
 	return (ptr);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

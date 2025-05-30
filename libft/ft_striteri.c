@@ -6,11 +6,9 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:14:50 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 03:15:31 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:11:15 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /**
  * Applies function `f` to each character of string `s`
@@ -32,6 +30,7 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+// #include <stdio.h>
 
 // static void	modify_case(unsigned int i, char *c)
 // {

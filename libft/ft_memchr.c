@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 01:14:26 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 02:14:23 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:06:43 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

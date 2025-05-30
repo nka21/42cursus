@@ -6,21 +6,16 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:39 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 03:53:05 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 15:26:42 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-// TODO: 使わないincludeを削除する 各ファイルのmainの上に書く
-// # include <bsd/string.h>
-# include <ctype.h>
 # include <limits.h>
 # include <stdint.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);

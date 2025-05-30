@@ -6,11 +6,9 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:28 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:22:20 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:02:04 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// #include "libft.h"
 
 /**
  * Checks if a character is an ASCII character (0 to 127).
@@ -26,6 +24,9 @@ int	ft_isascii(int c)
 {
 	return (0 <= c && c <= 127);
 }
+
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:33:59 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 03:27:42 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 20:09:11 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,16 @@
  */
 char	*ft_strrchr(const char *str, int c)
 {
-	size_t			len;
-	unsigned char	uc;
-	const char		*ptr;
+	size_t		len;
+	char		cc;
+	const char	*ptr;
 
-	// TODO: unsigned char を使わずに、char でやる。
 	len = ft_strlen(str);
-	uc = (unsigned char)c;
+	cc = (char)c;
 	ptr = str + len;
 	while (1)
 	{
-		if ((unsigned char)*ptr == uc)
+		if (*ptr == cc)
 			return ((char *)ptr);
 		if (ptr == str)
 			break ;
@@ -43,6 +42,9 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:10:05 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 03:37:48 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 20:16:45 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ static int	ft_islower(int c)
 int	ft_toupper(int c)
 {
 	if (ft_islower(c))
-		// TODO: マジックナンバーを使わずにやる
-		return (c - 32);
+		return (c + ('A' - 'a'));
 	return (c);
 }
+
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

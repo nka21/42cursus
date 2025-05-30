@@ -6,11 +6,9 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:31 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 03:34:02 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 15:33:40 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_islower(int c)
 {
@@ -36,6 +34,9 @@ int	ft_isalpha(int c)
 {
 	return (ft_islower(c) || ft_isupper(c));
 }
+
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

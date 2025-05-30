@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:25:26 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 04:06:35 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:34:37 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ void	*ft_memmove(void *dst, const void *src, size_t cpy_size)
 	}
 	return (dst);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

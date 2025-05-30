@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 12:32:00 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 21:02:34 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 15:31:10 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, total);
 	return (ptr);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
 
 // int	main(void)
 // {

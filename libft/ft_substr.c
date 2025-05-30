@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:10:54 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 03:57:23 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 20:13:16 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

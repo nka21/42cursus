@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:11:34 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 21:01:43 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:13:22 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joined[total_len] = '\0';
 	return (joined);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

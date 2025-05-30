@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:34:32 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 03:14:25 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:46:33 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return ((const unsigned char)*s1 - (const unsigned char)*s2);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

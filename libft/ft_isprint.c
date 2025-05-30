@@ -6,11 +6,9 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 16:43:00 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:20:00 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:03:49 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// #include "libft.h"
 
 /**
  * Checks if a character is printable, including space.
@@ -26,6 +24,9 @@ int	ft_isprint(int c)
 {
 	return (32 <= c && c <= 126);
 }
+
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

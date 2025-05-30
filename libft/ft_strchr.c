@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:33:14 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:10:59 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:56:42 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str);
 	return (NULL);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

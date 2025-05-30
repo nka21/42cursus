@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:13:17 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 02:26:33 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:05:11 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
+// #include <stdio.h>
+
 // int	main(void)
 // {
 // 	char	*result;
@@ -79,7 +81,7 @@ char	*ft_itoa(int n)
 // 	{
 // 		result = ft_itoa(test_values[i]);
 // 		printf("Input: %d\nOutput: \"%s\"\n\n", test_values[i], result);
-// 		free(result); // メモリリークを防ぐために解放
+// 		free(result);
 // 		i++;
 // 	}
 // 	return (0);

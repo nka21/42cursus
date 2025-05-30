@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:36 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 18:01:11 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 15:31:49 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
+
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

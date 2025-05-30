@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 16:54:29 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:16:17 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:38:09 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,14 @@ size_t	ft_strlen(const char *str)
 	return (len);
 }
 
+// #include <stdio.h>
+// #include <string.h>
+
 // int	main(void)
 // {
 // 	printf("ft_strlen(): %zu\n", ft_strlen("42tokyo"));
 // 	printf("strlen(): %lu\n", strlen("42tokyo"));
 // 	printf("ft_strlen(): %zu\n", ft_strlen("あいうえお"));
 // 	printf("strlen(): %lu\n", strlen("あいうえお"));
-// 	printf("ft_strlen(): %zu\n", ft_strlen(NULL));
-// 	printf("strlen(): %lu\n", strlen(NULL));
 // 	return (0);
 // }

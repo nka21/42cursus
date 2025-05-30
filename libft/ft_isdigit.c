@@ -6,11 +6,9 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:34 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/25 18:00:53 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:03:06 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /**
  * Checks if a character is a digit (0-9).
@@ -26,6 +24,9 @@ int	ft_isdigit(int c)
 {
 	return ('0' <= c && c <= '9');
 }
+
+// #include <ctype.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

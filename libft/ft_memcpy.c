@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:27:15 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 04:07:09 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 18:34:05 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t cpy_size)
 		*dst_ptr++ = *src_ptr++;
 	return (dst);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {

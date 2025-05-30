@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:31:38 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/21 18:13:24 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:33:11 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
+
+// #include <bsd/string.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

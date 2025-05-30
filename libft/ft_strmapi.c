@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:14:00 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/28 03:06:48 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:38:57 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 // static char	to_upper(unsigned int i, char c)
 // {

@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:31:35 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 03:12:42 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 19:31:04 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 
-	// TODO: strnlen を使って、dstsize == 0 の場合を実装する
-	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
+	if (dstsize == 0)
+		return (src_len);
+	dst_len = ft_strlen(dst);
 	if (dst_len >= dstsize)
 		return (dstsize + src_len);
 	i = 0;
@@ -45,6 +46,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
+// -lbsd
+// #include <bsd/string.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {
@@ -55,9 +59,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // 	char	src[] = "world!";
 // 	size_t	result;
 
-// 	ft_result = ft_strlcat(ft_dst, ft_src, sizeof(ft_dst));
-// 	printf("ft: dst = \"%s\", size = %zu\n", ft_dst, ft_result);
-// 	result = strlcat(dst, src, sizeof(dst));
-// 	printf("  : dst = \"%s\", size = %zu\n", dst, result);
+// 	ft_result = ft_strlcat(NULL, ft_src, 0);
+// 	printf("ft: dst = \"%s\", size = %zu\n", (char *)NULL, ft_result);
+// 	result = strlcat(NULL, src, 0);
+// 	printf("  : dst = \"%s\", size = %zu\n", (char *)NULL, result);
 // 	return (0);
 // }
