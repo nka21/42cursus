@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 17:33:34 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/29 18:14:56 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 23:05:45 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <unistd.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int	ft_printf(const char *format, ...);
+
+int	ft_put_hex(unsigned int n, char *base);
+int	ft_putptr_hex(unsigned long num);
+int	ft_put_unsigned(unsigned int n);
 
 int	ft_print_char(int c);
 int	ft_print_string(char *str);

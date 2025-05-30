@@ -1,9 +1,9 @@
 # コンパイラとフラグ
-CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # ソースファイルとオブジェクトファイル
 SRCS = src/ft_printf.c \
+		src/utils.c \
        $(wildcard src/conversions/*.c) \
        $(wildcard src/libft/*.c)
 OBJS = $(SRCS:.c=.o)

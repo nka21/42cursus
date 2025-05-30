@@ -6,7 +6,7 @@
 #    By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/05/29 23:05:44 by nkojima          ###   ########.fr        #
+#    Updated: 2025/05/30 23:09:20 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,8 @@
 #            Settings           #
 #################################
 NAME      = libft.a
-CC        = cc
 CFLAGS    = -Wall -Wextra -Werror
-AR        = ar
 ARFLAGS   = rcs
-RM        = rm -f
 
 #################################
 #         Source & Objects      #

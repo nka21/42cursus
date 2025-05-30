@@ -6,15 +6,15 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 22:32:06 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/29 23:06:50 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 23:05:42 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int ft_print_char(int c)
+int	ft_print_char(int c)
 {
-    ft_putchar_fd(c, 1);
-    return (1);
+	ft_putchar_fd(c, 1);
+	return (1);
 }

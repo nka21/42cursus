@@ -6,13 +6,13 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 22:55:29 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/29 22:55:33 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 23:05:36 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_integer(int n)
+int	ft_print_integer(int n)
 {
-    return (ft_print_decimal(n));
+	return (ft_print_decimal(n));
 }

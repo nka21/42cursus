@@ -6,15 +6,15 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 22:45:15 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/29 23:16:40 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/30 23:05:35 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int ft_print_percent(void)
+int	ft_print_percent(void)
 {
-    ft_putchar_fd('%', 1);
-    return (1);
+	ft_putchar_fd('%', 1);
+	return (1);
 }
