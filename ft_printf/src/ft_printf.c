@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 17:33:34 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 23:05:29 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/06/01 17:25:50 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	ft_printf(const char *format, ...)
 	int		count;
 	va_list	args;
 
+	if (format == NULL)
+		return (-1);
 	count = 0;
 	va_start(args, format);
 	while (*format)

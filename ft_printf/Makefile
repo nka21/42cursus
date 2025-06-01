@@ -1,42 +1,78 @@
-# コンパイラとフラグ
-CFLAGS = -Wall -Wextra -Werror
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/06/01 14:16:20 by nkojima           #+#    #+#              #
+#    Updated: 2025/06/01 16:26:02 by nkojima          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-# ソースファイルとオブジェクトファイル
-SRCS = src/ft_printf.c \
-		src/utils.c \
-       $(wildcard src/conversions/*.c) \
-       $(wildcard src/libft/*.c)
-OBJS = $(SRCS:.c=.o)
+#################################
+#            Settings           #
+#################################
+NAME         = libftprintf.a
+CFLAGS       = -Wall -Wextra -Werror
+ARFLAGS      = rcs
 
-# ヘッダーファイルのディレクトリ
-INCLUDES = -I./include -I./src/libft/include
+#################################
+#         Source Files          #
+#################################
+PRINTF_FILES = ft_printf \
+               ft_utils
 
-# ライブラリ名
-NAME = libftprintf.a
+CONV_FILES   = ft_print_char \
+               ft_print_decimal \
+               ft_print_hex_lower \
+               ft_print_hex_upper \
+               ft_print_integer \
+               ft_print_percent \
+               ft_print_pointer \
+               ft_print_string \
+               ft_print_unsigned
 
-# デフォルトターゲット
+LIBFT_FILES  = ft_strlen \
+               ft_putchar_fd \
+               ft_putstr_fd
+
+#################################
+#        Paths & Objects        #
+#################################
+SRCDIR       = src
+CONVDIR      = $(SRCDIR)/conversions
+LIBFTDIR     = $(SRCDIR)/libft
+
+PRINTF_SRCS  = $(addprefix $(SRCDIR)/, $(addsuffix .c, $(PRINTF_FILES)))
+CONV_SRCS    = $(addprefix $(CONVDIR)/, $(addsuffix .c, $(CONV_FILES)))
+LIBFT_SRCS   = $(addprefix $(LIBFTDIR)/, $(addsuffix .c, $(LIBFT_FILES)))
+
+SRCS         = $(PRINTF_SRCS) $(CONV_SRCS) $(LIBFT_SRCS)
+OBJS         = $(SRCS:.c=.o)
+INCLUDES     = -I./include -I./$(LIBFTDIR)/include
+
+#################################
+#            Rules              #
+#################################
 all: $(NAME)
 
-# ライブラリの作成
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(AR) $(ARFLAGS) $@ $?
 
-# オブジェクトファイルの作成
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-# テスト用ターゲット（提出する必要はない）
 test: $(NAME)
 	$(CC) $(CFLAGS) $(INCLUDES) main.c -L. -lftprintf -o test_printf
 	./test_printf
 
-# クリーンアップ
 clean:
-	rm -f $(OBJS)
-	rm -f test_printf
+	$(RM) $(OBJS)
+	$(RM) test_printf
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 

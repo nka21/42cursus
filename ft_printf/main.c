@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 17:37:17 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 23:19:23 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/06/01 17:26:19 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include <limits.h>
 #include <stdio.h>
 
-// void	print_test_header(char *test_name)
+// static void	print_test_header(char *test_name)
 // {
 // 	printf("\n\n########### %s ###########\n", test_name);
 // 	puts("--------------------------");
 // }
 
-// void	print_return_values(int ft_ret, int og_ret)
+// static void	print_return_values(int ft_ret, int og_ret)
 // {
 // 	printf("ft戻り値: %d\n", ft_ret);
 // 	printf("og戻り値: %d\n", og_ret);
@@ -40,6 +40,9 @@
 
 // 	// 基本テスト（変換指定子なし）
 // 	print_test_header("変換指定子なし");
+// 	ft_ret = ft_printf(NULL);
+// 	og_ret = printf(NULL);
+// 	print_return_values(ft_ret, og_ret);
 // 	ft_ret = ft_printf("ft_printf: Hello, world!\n");
 // 	og_ret = printf("   printf: Hello, world!\n");
 // 	print_return_values(ft_ret, og_ret);

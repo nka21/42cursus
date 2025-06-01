@@ -6,7 +6,7 @@
 #    By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/05/30 23:09:20 by nkojima          ###   ########.fr        #
+#    Updated: 2025/06/01 15:08:14 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,48 +20,15 @@ ARFLAGS   = rcs
 #################################
 #         Source & Objects      #
 #################################
-SRC_FILES = isalpha \
-			isdigit \
-			isalnum \
-			isascii \
-			isprint \
-			strlen \
-			memset \
-			bzero \
-			memcpy \
-			memmove \
-			strlcpy \
-			strlcat \
-			toupper \
-			tolower \
-			strchr \
-			strrchr \
-			strncmp \
-			memchr \
-			memcmp \
-			strnstr \
-			atoi \
-			calloc \
-			strdup \
-			substr \
-			strjoin \
-			strtrim \
-			split \
-			itoa \
-			strmapi \
-			striteri \
+SRC_FILES = strlen \
 			putchar_fd \
-			putstr_fd \
-			putendl_fd \
-			putnbr_fd
+			putstr_fd
 SRCS 	   = $(addprefix ft_, $(addsuffix .c, $(SRC_FILES)))
 OBJS       = $(SRCS:.c=.o)
 
 #################################
 #            Rules              #
 #################################
-.PHONY: all clean fclean re
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -77,3 +44,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
