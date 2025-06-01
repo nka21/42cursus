@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 23:00:58 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 23:10:58 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/06/01 19:17:27 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,43 @@
 
 int	ft_put_hex(unsigned int n, char *base)
 {
-	int	count;
+	int		count;
+	size_t	base_len;
 
+	base_len = ft_strlen(base);
 	count = 0;
-	if (n >= 16)
-		count += ft_put_hex(n / 16, base);
-	ft_putchar_fd(base[n % 16], 1);
+	if (n >= base_len)
+		count += ft_put_hex(n / base_len, base);
+	ft_putchar_fd(base[n % base_len], 1);
 	return (count + 1);
 }
 
 int	ft_putptr_hex(unsigned long num)
 {
-	int	count;
+	char	*hex_base;
+	int		count;
+	size_t	base_len;
 
+	hex_base = "0123456789abcdef";
+	base_len = ft_strlen(hex_base);
 	count = 0;
-	if (num >= 16)
-		count += ft_putptr_hex(num / 16);
-	if ((num % 16) < 10)
-		count += ft_print_char('0' + (num % 16));
-	else
-		count += ft_print_char('a' + (num % 16 - 10));
+	if (num >= base_len)
+		count += ft_putptr_hex(num / base_len);
+	count += ft_print_char(hex_base[num % base_len]);
 	return (count);
 }
 
 int	ft_put_unsigned(unsigned int n)
 {
-	int	count;
+	char	*decimal_base;
+	int		count;
+	size_t	base_len;
 
+	decimal_base = "0123456789";
+	base_len = ft_strlen(decimal_base);
 	count = 0;
-	if (n >= 10)
-		count += ft_put_unsigned(n / 10);
-	ft_putchar_fd((n % 10) + '0', 1);
+	if (n >= base_len)
+		count += ft_put_unsigned(n / base_len);
+	ft_putchar_fd(decimal_base[n % base_len], 1);
 	return (count + 1);
 }
