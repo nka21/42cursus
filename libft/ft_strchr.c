@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 23:33:14 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/30 18:56:42 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/06/02 14:07:52 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,13 @@
  */
 char	*ft_strchr(const char *str, int c)
 {
-	char	char_c;
-
-	char_c = (char)c;
-	while (*str)
+	while (*str != (char)c)
 	{
-		if (*str == char_c)
-			return ((char *)str);
+		if (*str == '\0')
+			return (NULL);
 		str++;
 	}
-	if (char_c == '\0')
-		return ((char *)str);
-	return (NULL);
+	return ((char *)str);
 }
 
 // #include <stdio.h>
