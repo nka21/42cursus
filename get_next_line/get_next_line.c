@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 17:56:12 by nkojima           #+#    #+#             */
-/*   Updated: 2025/06/03 00:23:30 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/06/03 00:30:35 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,6 +157,9 @@ char	*get_next_line(int fd)
 		stored_data = read_until_newline(fd, stored_data);
 	return (extract_line(&stored_data));
 }
+
+// #include <fcntl.h>
+// #include <stdio.h>
 
 // int	main(int argc, char **argv)
 // {
