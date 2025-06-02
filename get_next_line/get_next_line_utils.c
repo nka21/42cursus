@@ -6,99 +6,17 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 13:56:30 by nkojima           #+#    #+#             */
-/*   Updated: 2025/06/02 15:20:12 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/06/03 00:25:31 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 /**
- * Copies n bytes from memory area src to memory area dst.
+ * Calculate the length of a string
  *
- * Params:
- * @dst: The destination memory area.
- * @src: The source memory area.
- * @cpy_size: The number of bytes to copy.
- *
- * Return:
- * A pointer to the destination memory area (dst).
- */
-void	*ft_memcpy(void *dst, const void *src, size_t cpy_size)
-{
-	unsigned char		*dst_ptr;
-	const unsigned char	*src_ptr;
-
-	if (cpy_size == 0 || dst == src)
-		return (dst);
-	dst_ptr = (unsigned char *)dst;
-	src_ptr = (const unsigned char *)src;
-	while (cpy_size--)
-		*dst_ptr++ = *src_ptr++;
-	return (dst);
-}
-
-/**
- * Concatenates two strings into a newly allocated string.
- *
- * Params:
- * @s1: The first string.
- * @s2: The second string.
- *
- * Return:
- * A newly allocated string containing `s1` followed by `s2`,
-	or NULL on failure.
- */
-char	*ft_strjoin(char *s1, char const *s2)
-{
-	size_t	len1;
-	size_t	len2;
-	size_t	total_len;
-	char	*joined;
-
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	total_len = len1 + len2;
-	joined = malloc(sizeof(*joined) * (total_len + 1));
-	if (!joined)
-		return (NULL);
-	if (s1)
-		ft_memcpy(joined, s1, len1);
-	ft_memcpy(joined + len1, s2, len2);
-	joined[total_len] = '\0';
-	free(s1);
-	return (joined);
-}
-
-/**
- * Finds the first occurrence of a character in a string.
- *
- * Params:
- * @s: The string to search.
- * @c: The character to find.
- *
- * Return:
- * A pointer to the first occurrence of the character `c` in the string `s`,
- * or NULL if the character is not found.
- */
-char	*ft_strchr(const char *str, int c)
-{
-	while (*str != (char)c)
-	{
-		if (*str == '\0')
-			return (NULL);
-		str++;
-	}
-	return ((char *)str);
-}
-
-/**
- * Calculates the length of a string.
- *
- * Params:
- * @str: The string to measure.
- *
- * Return:
- * The number of characters in the string (excluding the null terminator).
+ * @param str String to measure
+ * @return size_t Length of the string (0 if NULL)
  */
 size_t	ft_strlen(const char *str)
 {
@@ -110,4 +28,116 @@ size_t	ft_strlen(const char *str)
 	while (str[len])
 		len++;
 	return (len);
+}
+
+/**
+ * Find the first occurrence of a character in a string
+ *
+ * @param str String to search
+ * @param c Character to find
+ * @return char* Pointer to the found character, NULL if not found
+ */
+char	*ft_strchr(const char *str, int c)
+{
+	if (!str)
+		return (NULL);
+	while (*str != (char)c)
+	{
+		if (*str == '\0')
+			return (NULL);
+		str++;
+	}
+	return ((char *)str);
+}
+
+/**
+ * Duplicate a string
+ *
+ * @param s1 String to duplicate
+ * @return char* Newly allocated copy of the string, NULL on error
+ */
+char	*ft_strdup(const char *s1)
+{
+	size_t	len;
+	char	*dup;
+	size_t	i;
+
+	if (!s1)
+		return (NULL);
+	len = ft_strlen(s1);
+	dup = malloc(sizeof(*dup) * (len + 1));
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		dup[i] = s1[i];
+		i++;
+	}
+	dup[len] = '\0';
+	return (dup);
+}
+
+/**
+ * Join two strings together
+ *
+ * @param s1 First string (will be freed within this function)
+ * @param s2 Second string
+ * @return char* Newly allocated joined string, NULL on error
+ *
+ * Note: This function frees the first argument
+ */
+char	*ft_strjoin(char *s1, char const *s2)
+{
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
+	char	*joined;
+
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	joined = malloc(sizeof(*joined) * (len1 + len2 + 1));
+	if (!joined)
+		return (free(s1), NULL);
+	i = 0;
+	while (s1 && i < len1)
+	{
+		joined[i] = s1[i];
+		i++;
+	}
+	i = 0;
+	while (s2 && i < len2)
+	{
+		joined[len1 + i] = s2[i];
+		i++;
+	}
+	joined[len1 + len2] = '\0';
+	return (free(s1), joined);
+}
+
+/**
+ * Copy memory area
+ *
+ * @param dst Destination memory area
+ * @param src Source memory area
+ * @param n Number of bytes to copy
+ * @return void* Pointer to destination
+ */
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	unsigned char		*d;
+	const unsigned char	*s;
+	size_t				i;
+
+	if (!dst && !src)
+		return (NULL);
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dst);
 }
