@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 23:06:35 by nkojima           #+#    #+#             */
-/*   Updated: 2025/06/03 00:30:23 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/08/02 17:16:21 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 20
+#  define BUFFER_SIZE 42
 # endif
 
 # include <stdlib.h>
