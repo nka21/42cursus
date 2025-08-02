@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 17:56:12 by nkojima           #+#    #+#             */
-/*   Updated: 2025/06/03 00:30:35 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/08/02 19:57:51 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ static int	handle_buffer_read(int fd, char *buffer, char **stored_data)
 	temp = ft_strjoin(*stored_data, buffer);
 	if (!temp)
 	{
-		free(*stored_data);
+		// free(*stored_data);
 		*stored_data = NULL;
 		return (-1);
 	}
