@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 17:56:12 by nkojima           #+#    #+#             */
-/*   Updated: 2025/08/02 19:57:51 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/08/03 18:16:40 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,17 @@ static char	*extract_line_with_newline(char **stored_data, char *newline_pos)
 	char	*line;
 	char	*temp;
 	size_t	line_len;
-	size_t	i;
 
 	line_len = newline_pos - *stored_data + 1;
 	line = malloc(line_len + 1);
 	if (!line)
-		return (NULL);
-	i = 0;
-	while (i < line_len)
-	{
-		line[i] = (*stored_data)[i];
-		i++;
-	}
+		return (free(*stored_data), *stored_data = NULL, NULL);
+	ft_memcpy(line, *stored_data, line_len);
 	line[line_len] = '\0';
 	temp = *stored_data;
 	*stored_data = ft_strdup(newline_pos + 1);
 	if (!*stored_data)
-	{
-		*stored_data = temp;
-		return (free(line), NULL);
-	}
+		return (free(line), free(temp), *stored_data = NULL, NULL);
 	free(temp);
 	return (line);
 }
@@ -60,18 +51,12 @@ static char	*extract_line(char **stored_data)
 	char	*line;
 
 	if (!*stored_data || **stored_data == '\0')
-	{
-		free(*stored_data);
-		*stored_data = NULL;
-		return (NULL);
-	}
+		return (free(*stored_data), *stored_data = NULL, NULL);
 	newline_pos = ft_strchr(*stored_data, '\n');
 	if (newline_pos)
 		return (extract_line_with_newline(stored_data, newline_pos));
 	line = ft_strdup(*stored_data);
-	free(*stored_data);
-	*stored_data = NULL;
-	return (line);
+	return (free(*stored_data), *stored_data = NULL, line);
 }
 
 /**
@@ -94,11 +79,7 @@ static int	handle_buffer_read(int fd, char *buffer, char **stored_data)
 	buffer[bytes_read] = '\0';
 	temp = ft_strjoin(*stored_data, buffer);
 	if (!temp)
-	{
-		// free(*stored_data);
-		*stored_data = NULL;
-		return (-1);
-	}
+		return (*stored_data = NULL, -1);
 	*stored_data = temp;
 	if (ft_strchr(*stored_data, '\n'))
 		return (0);
@@ -119,10 +100,7 @@ static char	*read_until_newline(int fd, char *stored_data)
 
 	buffer = malloc(sizeof(*buffer) * (BUFFER_SIZE + 1));
 	if (!buffer)
-	{
-		free(stored_data);
-		return (NULL);
-	}
+		return (free(stored_data), NULL);
 	while (1)
 	{
 		read_result = handle_buffer_read(fd, buffer, &stored_data);
@@ -131,10 +109,7 @@ static char	*read_until_newline(int fd, char *stored_data)
 	}
 	free(buffer);
 	if (read_result < 0)
-	{
-		free(stored_data);
-		return (NULL);
-	}
+		return (free(stored_data), NULL);
 	return (stored_data);
 }
 
