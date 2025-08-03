@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 17:56:12 by nkojima           #+#    #+#             */
-/*   Updated: 2025/08/03 18:16:40 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/08/03 19:24:35 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,6 +147,7 @@ char	*get_next_line(int fd)
 // 		return (1);
 // 	}
 // 	fd = open(argv[1], O_RDONLY);
+// 	printf("%d\n", fd);
 // 	if (fd < 0)
 // 	{
 // 		perror("open");
